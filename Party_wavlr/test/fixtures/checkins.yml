@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reservation: false
+  attendent: false
+  comment: MyText
+
+two:
+  reservation: false
+  attendent: false
+  comment: MyText

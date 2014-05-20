@@ -5,6 +5,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_hash
       t.string :password_digest
 
+      t.integer :checkin
+      t.integer :Friend_group
+
       t.timestamps
     end
   end
