@@ -6,5 +6,11 @@ class Photo < ActiveRecord::Base
     response = HTTParty.get(url)
     image_url = response["data"][0]["images"]["standard_resolution"]["url"]
   end
+
+  def get_like(newyork)
+     url = "https://api.instagram.com/v1/media/555/likes?access_token=32850880.f59def8.98d1f66250f3461bacad5d8cf9a76c25"
+    response = HTTParty.get(url)
+    like_url = response["data"][0]["username"]
+  end
 end
 
