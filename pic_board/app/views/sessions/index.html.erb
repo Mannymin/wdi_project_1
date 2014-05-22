@@ -1,0 +1,17 @@
+
+<ul class="sessions">
+  <% @sessions.each do |session| %>
+    <li>
+      <h4 class="session_name"><%= link_to session.name, "/sessions/#{session.id}" %></h4>
+      <p>
+        <ul class="photos">
+        <% session.photos.each do |photo| %>
+          <li class="photo_title">
+            <%= link_to photo.title, "/photos/#{photo.id}" %>
+          </li>
+        <% end %>
+        </ul>
+      </p>
+    </li>
+  <% end %>
+</ul>

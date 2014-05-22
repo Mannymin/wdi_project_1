@@ -1,0 +1,30 @@
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span_2_of_2 {
+	width: 100%;
+}
+
+/* if you change the widths, do so equally: add the exact amount
+   you subtract from one column to the other column */
+.span_1_of_2_left {
+	width: 39.2%;
+}
+.span_1_of_2_right {
+  width: 59.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2 {
+		width: 100%;
+	}
+	.span_1_of_2_left {
+		width: 100%;
+	}
+  .span_1_of_2_right {
+    width: 100%;
+  }
+}
+}

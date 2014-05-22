@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :posts
+
+  resources :comments
+
   root to: "sessions#new"
   get 'favorite_lists/new'
 

@@ -1,0 +1,17 @@
+<h1> whats good <%user.name %></h1>
+
+<div class="photo_share">
+     <ul>
+     <% @user.photos.each do |photo| %>
+     <li>
+     <%= link_to photo.name, photo_path(photo) %>
+     </li>
+
+<% end %>
+     </ul>
+</div>
+
+<div class="button">
+     <%= link_to "Create some other shit!" ,
+     new_photo_path%>
+<div>

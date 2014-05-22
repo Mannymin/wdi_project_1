@@ -2,9 +2,9 @@ class SessionsController < ApplicationController
   def new
   end
   def create
-     user = Users.find_by_email(params[:email])
-     binding.pry
-     success = users.authenticate(params[:password])
+     user = User.find_by_email(params[:email])
+
+     success = user.authenticate(params[:password])
   if success
           session[:user_id] = user.id
 
@@ -17,6 +17,9 @@ end
 
      def destroy
        session[:user_id] = nil
-       redirect_to root_url, :notice => "Logged out!"
+       # redirect_to root_url, :notice => "Logged out!"
+       redirect_to "/photos"
+
+
      end
 end
